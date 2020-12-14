@@ -14,10 +14,11 @@ const router = createRouter({
 		{
 			path: '/coaches/:id',
 			component: CoachDetail,
-			children: [ { path: 'contact', component: ContactCoach } ]
+			// nested route digunakan untuk menambahkan child route dan child component dalam suatu route parent / component parent
+			children: [ { path: 'contact', component: ContactCoach } ] 
 		},
 		{ path: '/register', component: CoachRegistration },
-		{ path: '/request', component: RequestsReceived },
+		{ path: '/requests', component: RequestsReceived },
 		{ path: '/:notFound(.*)', component: NotFound }
 	]
 });
