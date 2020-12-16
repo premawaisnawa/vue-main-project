@@ -14,6 +14,7 @@ const router = createRouter({
 		{
 			path: '/coaches/:id',
 			component: CoachDetail,
+			props: true,
 			// nested route digunakan untuk menambahkan child route dan child component dalam suatu route parent / component parent
 			children: [ { path: 'contact', component: ContactCoach } ] 
 		},
